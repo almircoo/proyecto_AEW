@@ -1,0 +1,104 @@
+* {
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #000;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-btn{
+    background-color: #8FBF38;
+    color: #fff;
+    border-radius: 10px;
+    padding: 7%;
+    margin: 7px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem; /* Separa espacio entre filas y columnas */
+}
+
+.btn-primary {
+    background-color: #8FBF38;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.btn-primary:hover{
+    background-color: #8FBF38;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 10px 15px;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.btn-secondary:hover{
+    background-color: #8FBF38;
+    color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+section {
+    padding: 15px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-card {
+    background-color: white;
+    padding: 1rem;
+}
