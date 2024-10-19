@@ -48,3 +48,6 @@ _testmain.go
 *.psd
 
 .DS_Store
+js/test.js
+css/style.css
+paginas/home.html

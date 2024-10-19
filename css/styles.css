@@ -1,20 +1,30 @@
-* {
-    margin: 2px;
-    padding: 2px;
-    box-sizing: border-box;
-}
-
+/* styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 2;
+    line-height: 1.5;
+    color: #333;
+    /* layout */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;  /*  padding en izqueda y derecha*/
 }
 
+
+/* Header and Navigation */
 header {
+    background-color: #fff;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    color: #000;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -22,83 +32,383 @@ header {
     margin-right: 10px;
 }
 
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006064;
+}
+
 nav ul {
+    display: flex;
     list-style: none;
-    display: flex;
-    gap: 15px;
+    gap: 5rem;  /* hace espacio entre columnas y filas */
 }
 
-nav a {
-    color: #000;
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: #333;
 }
 
-.contact-btn{
-    background-color: #8FBF38;
-    color: #fff;
-    border-radius: 10px;
-    padding: 7%;
-    margin: 7px;
+nav ul li a:hover{
+    color: #006064;
 }
-.hero {
+.contact-button {
+    background-color: #006064;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+#hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 2rem;
-    background-color: #f5f5f5;
+    align-items: center;
+    padding: 80px 0;
 }
 
 .hero-content {
-    max-width: 600px;
+    flex: 1; /* how work https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    padding-right: 40px;
 }
 
-.hero-buttons {
+.hero-content h1 {
+    font-size: 48px;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
     display: flex;
-    gap: 1rem; /* Separa espacio entre filas y columnas */
+    gap: 20px;
 }
 
-.btn-primary {
-    background-color: #8FBF38;
-    color: white;
-    border-radius: 10px;
-    border: 1px solid gray;
-    text-decoration: none;
-    padding: 10px 15px;
+.primary-button, .secondary-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
-.btn-primary:hover{
-    background-color: #8FBF38;
+
+.primary-button {
+    background-color: #8CC63F;
     color: #fff;
-    border-radius: 10px;
-    border: 1px solid gray;
-    padding: 10px 15px;
 }
 
-.btn-secondary {
+.secondary-button {
     background-color: #fff;
-    color: #000;
-    border: 1px solid gray;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-.btn-secondary:hover{
-    background-color: #8FBF38;
-    color: #fff;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 10px 15px;
+    color: #006064;
+    border: 2px solid #006064;
 }
 
-section {
-    padding: 15px;
+.hero-image {
+    flex: 1;
+    width: 70%;
+    height: auto;
+}
+
+
+/* Features Section */
+#features {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.feature-content h2 {
+    font-size: 36px;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    font-size: 18px;  /* tamano letra */
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+.feature-image{
+    flex: 1; /* how work https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    width: 70%;
+    height: auto;
+}
+/* Process Section */
+#process {
+    padding: 10px;
+}
+
+#process h2 {
+    font-size: 36px;
+    color: #006064;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.process-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.process-image {
+    flex: 1; /* how work https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    margin-right: 45px;
+}
+
+.process-steps {
+    flex: 1; /* how work https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step-number {
+    background-color: #8CC63F;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* Services Section */
+#servicios {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#servicios h2 {
+    font-size: 36px;
+    color: #006064;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .service-cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px; /* separa spacios entre filas y columnas */
 }
 
 .service-card {
-    background-color: white;
-    padding: 1rem;
+    background-color: #f5f5f5;
+    padding: 30px;
+    text-align: center;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #006064;
+    margin: 20px 0;
+}
+
+.service-card button {
+    background-color: #8CC63F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 36px;
+    color: #006064;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.carousel-slide p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.client-name {
+    font-weight: bold;
+    color: #006064;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #8CC63F;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f5f5f5;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: #fff;
+    border: 1px solid #006064;
+}
+.contact-info {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    color: #006064;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Multiple declaracion -  https://stackoverflow.com/questions/13444647/css-class-definition-with-multiple-identifiers*/
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #8CC63F;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+/* Footer */
+footer {
+    color: #000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+nav .footer-nav{
+    align-items: center;
+}
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 20px;
+    
+}
+
+.footer-nav ul li {
+    margin: 0 15px;
+}
+
+.footer-nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #006064;
+}
+
+/* Responsive - guia https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design */
+@media (max-width: 768px) {
+    #hero, .process-content, #contact {
+        flex-direction: column;
+    }
+
+    .hero-content, .process-image, .feature-content, .feature-image .contact-info {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .service-card {
+        margin-bottom: 30px;
+    }
 }
