@@ -409,33 +409,34 @@ select{
     
 }
 
-.project-header {
-    text-align: center;
+.project-category{
+    display: flex;
     margin-bottom: 40px;
+    justify-content:space-between;
 }
 
-.project-header h1 {
+.project-category h1 {
     font-size: 36px;
     font-weight: bold;
 }
 
-.project-header .filter {
+.project-category .filter {
     list-style-type: none;
     margin-top: 20px;
 }
 
-.project-header .filter li {
+.project-category .filter li {
     display: inline;
     margin: 0 15px;
 }
 
-.project-header .filter li a {
+.project-category .filter li a {
     text-decoration: none;
     font-size: 18px;
     color: #000;
 }
 
-.project-header .filter li a:hover {
+.project-category .filter li a:hover {
     color: #8FBF38;
 }
 
@@ -451,6 +452,7 @@ select{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
 }
 
 .project-card:hover {
@@ -459,13 +461,13 @@ select{
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
 }
 
 .project-info {
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .project-info h3 {
@@ -478,7 +480,16 @@ select{
     color: #888;
     margin-bottom: 15px;
 }
-
+.project-card-title{
+    display: flex;
+    justify-content: space-between;  /* espacio entre <h3> y <a> */
+    align-items: center; 
+    padding: 10px 0; 
+}
+/* posicioona botton en la derecha */
+.project-card-title h3, button {
+    display: inline;
+}
 .rating {
     display: block;
     font-size: 16px;
@@ -487,16 +498,19 @@ select{
 }
 
 .demo-button {
-    background-color: #8FBF38;
-    color: white;
+    background-color: #fff;
+    color: #8FBF38;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border: 1px solid #8FBF38;
+    border-radius: 15px;
+    font-size: 17px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .demo-button:hover {
-    background-color: #8FBF38;
+    background-color: #fff;
+    border: 1px solid #8FBF38;
 }
 /* Footer */
 footer {
@@ -583,6 +597,26 @@ nav .footer-nav{
 }
 .footer-bottom span{
 font-weight: bold;
+}
+
+/* botton flotante */
+#back-to-top {
+    position: fixed; /* Hace que el botón se fije en el viewport. */
+    bottom: 20px;
+    right: 20px;
+    background-color: #8FBF38;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 23px; /* tamano flecha */
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* oculto al inicio */
+}
+
+#back-to-top:hover {
+    background-color: #8FBF38; 
 }
 
 /* Responsive - guia https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design */
