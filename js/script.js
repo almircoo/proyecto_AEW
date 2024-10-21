@@ -49,3 +49,25 @@ contactForm.addEventListener('submit', function(e) {
     // Resetear el formulario
     this.reset();
 });
+
+
+// 
+// botton flotante volver inicio
+// https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+window.onscroll = function() {
+    var button = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";  // muestra el botton scroll hacia abajo
+    } else {
+        button.style.display = "none";   // Oculta el botton en el top
+    }
+};
+
+// Desplasa hacia la parte arriba cuando se hace clic en el botton
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Desplazamiento suave hasta el top
+    });
+}
