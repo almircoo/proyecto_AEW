@@ -16,6 +16,7 @@ body {
 header {
     background-color: #fff;
     display: flex;
+    justify-content: space-between; 
     align-items: center;
     padding: 20px 0;
 }
@@ -28,36 +29,70 @@ header {
 nav ul {
     display: flex;
     list-style-type: none;
-    gap: 5rem;  /* hace espacio entre columnas y filas */
+    gap: 5rem;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+    position: relative;
     font-weight: bold;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
+    display: block;
+    padding: 10px 15px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #006064;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 96, 100, 0.8);
+    color: white;
+}
+
 .contact-button {
     background-color: #006064;
-    color: #fff;
+    color: #fff !important;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.contact-button:hover{
+.contact-button:hover {
     background-color: #000;
-    color: #fff;
 }
-
 /* Hero Section */
 #hero {
     display: flex;
@@ -92,6 +127,7 @@ nav ul li a:hover{
     padding: 12px 24px;
     border: 2px solid #8CC63F;
     border-radius: 50px;
+    width: 200px;
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
@@ -111,13 +147,6 @@ nav ul li a:hover{
     color: #fff;
     border: 2px solid #006064;
 }
-
-.hero-image {
-    flex: 1;
-    width: 0%;
-    height: auto;
-}
-
 
 /* Features Section */
 #features {
@@ -520,7 +549,8 @@ nav .footer-nav{
 }
 
 .social-icons a:hover {
-    background-color: #e0e0e0;
+    /*background-color: #e0e0e0;*/
+    transform: scale(1.2);
 }
 
 .footer-bottom {
@@ -548,6 +578,13 @@ nav .footer-nav{
     text-decoration: none;
 }
 
+.footer-bottom a:hover{
+    color: #8FBF38;   
+}
+.footer-bottom span{
+font-weight: bold;
+}
+
 /* Responsive - guia https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design */
 @media (max-width: 768px) {
     #hero, .process-content, #contact {
@@ -566,4 +603,215 @@ nav .footer-nav{
     .service-card {
         margin-bottom: 30px;
     }
+}
+
+/*DESAROLLO A MEDIDA*/
+/* Servicios*/
+#services {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#services h2 {
+    font-size: 36px;
+    color: #006064;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#services div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#services article{
+    padding: 0px 20px 0px 20px;
+}
+
+#services article h3{
+    font-size: 25px;
+    color: #006064;
+}
+
+/*CONSULTORIA*/
+/* Features2 Section */
+#features2 {
+    display: flex;
+    padding: 30px;
+    margin: 20px;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.feature2-content h2 {
+    font-size: 36px;
+    color: #006064;
+    margin: 20px;
+}
+
+.feature2-content p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 40px;
+}
+.feature2-image{
+    flex: 1;
+    width: 70%;
+    height: auto;
+}
+
+/*EQUIPO*/
+/*Indicadores*/
+.indicadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.indicadores h2 {
+    font-size: 36px;
+    color: #000000;
+    text-align: lef;
+    margin-bottom: 40px;
+    line-height: 1.2;
+}
+
+.indicadores-content h2{
+   width: 400px;
+}
+
+.indicadores-content p{
+    width: 650px;
+    padding: 20px;
+    margin:20px;
+}
+
+.indicadores div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.indicadores-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.indicadores-stats article {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.indicadores-stats span {
+    font-size: 50px;
+    font-weight: bold;
+    color: #006064;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.indicadores-stats p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+/*Staff*/
+#staff{
+    padding: 10px;
+    margin: 20px;
+}
+
+#staff h2{
+    font-size: 36px;
+    color: #000000;
+    text-align: center; 
+    margin-bottom: 40px;
+}
+
+.staff-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.staff-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.name{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0 5px; 
+}
+
+.role{
+    text-align: center;
+    margin-top: 0;
+}
+
+/*HISTOIA*/
+/* Plan Operativo*/
+#po {
+    padding: 40px 20px;
+    margin: 10px;
+}
+
+#po h2 {
+    font-size: 36px;
+    color: #006064;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.plan{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.plan article{
+    flex: 1;
+    padding: 20px;
+}
+
+#po div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#po article h3{
+    font-size: 25px;
+    color: #006064;
+    margin-bottom: 15px;
+}
+
+#po article p,
+#po article ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#po article ul {
+    padding-left: 20px;
+}
+
+#po article ul li {
+    margin-bottom: 5px;
 }
