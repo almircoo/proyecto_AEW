@@ -9,20 +9,36 @@
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="../imagenes/home/Logotipo.png" alt="">
+        </div>
         <nav>
-            <div class="logo">
-                <img src="../imagenes/home/Logotipo.png" alt="">
-            </div>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-
-                
-            </ul>
-            <button class="contact-button">Contáctanos</button>
-            
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="">Servicios</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../paginas/desarrollo.html">Desarrollo a medida</a></li>
+                        <li><a href="../paginas/consultoria.html">Consultoría tecnológica</a></li>
+                        <li><a href="../paginas/uxuidesign.html">UX/UI Design</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">Proyectos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../paginas/projects.html">Portafolio</a></li>
+                        <li><a href="../paginas/cotiza.html">Cotiza tu proyecto</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="">Nosotros</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../paginas/historia.html">Historia</a></li>
+                        <li><a href="../paginas/equipo.html">Equipo</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="contact-button">Contáctanos</a></li>              
+            </ul>              
         </nav>
     </header>
 
@@ -191,11 +207,18 @@
                             <input type="text" name="name"  placeholder="Nombre" required>
                             <label for="institucion">Institución</label>
                             <input type="text" name="institucion" placeholder="Institución" required>
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <label for="celular">Celular</label>
-                            <input type="number" name="celular" placeholder="Celular" required>
-                            <select required>
+                            <div class="form-row">
+                                <div class="form-group separado">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" placeholder="E-mail">
+                                </div>
+        
+                                <div class="form-group separado">
+                                    <label for="celular">Celular</label>
+                                    <input type="text" id="celular" placeholder="Número de celular">
+                                </div>
+                            </div>
+                            <select style="background-color: #F5F5F5;" required>
                                 <option value="" disabled selected>Servicio</option>
                                 <option value="desarrollo">Desarrollo a medida</option>
                                 <option value="consultoria">Consultoría tecnológica</option>
@@ -218,24 +241,26 @@
         </div>
         <nav class="footer-nav">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="../paginas/index.html">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="../paginas/projects.html">Proyectos</a></li>
+                <li><a href="../paginas/equipo.html">Nosotros</a></li>
                 <li><a href="#contact">Contáctenos</a></li>
             </ul>
         </nav>
         <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href=https://www.facebook.com/aperturesoft><img src="../imagenes/home/facebook.png" alt="" width="30px" height="30px"></a>
+            <a href="https://www.instagram.com/code.enmicole/"><img src="../imagenes/home/instagram.png" alt="" width="30px" height="30px"></a>
+            <a href="https://www.linkedin.com/company/singularity-university/"><img src="../imagenes/home/linkedin.png" alt="" width="30px" height="30px"></a>
+            <a href="http://Github.com/almircoo"><img src="../imagenes/home/github.png" alt="" width="30px" height="30px"></a>
+            <a href="https://www.youtube.com/@unity"><img src="../imagenes/home/youtube.png" alt="" width="30px" height="30px"></a>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 DigitalPeru. Todos los derechos reservados.</p>
-            <a href="#">Términos y condiciones</a>
-            <a href="#">Política de privacidad</a>
+            <p>&copy; 2024 <span>DigitalPeru</span>. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="https://www.canvia.com/desarrollo-aplicaciones-moviles/">Términos y condiciones</a>
+                <a href="https://www.canvia.com/desarrollo-aplicaciones-moviles/">Política de privacidad</a>
+            </div>
         </div>
     </footer>
 

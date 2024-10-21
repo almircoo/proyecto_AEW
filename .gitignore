@@ -50,4 +50,5 @@ _testmain.go
 .DS_Store
 js/test.js
 css/test.css
+css/test_2.css
 paginas/home.html
