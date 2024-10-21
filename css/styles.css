@@ -120,7 +120,11 @@ nav ul li a:hover {
 
 .cta-buttons {
     display: flex;
-    gap: 20px;
+    gap: 20px;    
+}
+
+.cta-buttons a{
+    text-decoration: none;
 }
 
 .primary-button, .secondary-button {
@@ -130,7 +134,7 @@ nav ul li a:hover {
     width: 200px;
     font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: bold;    
 }
 
 .primary-button {
@@ -251,6 +255,10 @@ nav ul li a:hover {
     font-size: 24px;
     color: #006064;
     margin: 20px 0;
+}
+
+.service-card a{
+    text-decoration: none;
 }
 
 .service-card button {
